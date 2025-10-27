@@ -1,0 +1,839 @@
+:root {
+  /* Colors */
+  --color-primary: #1fa2d6;        /* Verde Base */
+  --color-primary-light: #76b867;  /* Verde Claro */
+  --color-primary-dark: #068fad;   /* Verde Escuro */
+  --color-primary-accent: #ebe067; /* Verde Amarelado */
+  --color-muted: #b2b2b2;          /* Cinza */
+  --color-dark: #2c2c2c;           /* Dark */
+  --color-surface: #e0ecdd;        /* Surface */
+  --color-red: #ef3525;            /* Vermelho */
+
+  /* Font (text) */
+  --f-xsm: 0.75rem;   /* 12px  - pequenas legendas */
+  --f-sm: 0.875rem;   /* 14px  - texto auxiliar */
+  --f-md: 1rem;       /* 16px  - texto padrão */
+  --f-lg: 1.125rem;   /* 18px  - texto de destaque */
+  --f-xl: 1.25rem;    /* 20px  - subtítulo leve */
+  --f-xxl: 1.5rem;    /* 24px  - destaque principal */
+
+  /* Font (titulo) */
+  --t-xsm: 1.25rem;   /* 20px  - h6 */
+  --t-sm: 1.5rem;     /* 24px  - h5 */
+  --t-md: 1.875rem;   /* 30px  - h4 */
+  --t-lg: 2.25rem;    /* 36px  - h3 */
+  --t-xl: 3rem;       /* 48px  - h2 */
+  --t-xxl: 3.75rem;   /* 60px  - h1 */
+
+  /* Espaçamento */
+  --s-xsm: 8px;
+  --s-sm: 16px;
+  --s-md: 24px;
+  --s-lg: 32px;
+  --s-xl: 48px;
+  --s-xxl: 64px;
+}
+
+* {
+    margin: 0 auto;
+}
+
+body {
+    background: #fff;
+    font-family: 'Arial';
+}
+
+/* TITLE */
+
+h1 {
+  font-size: var(--t-xxl)!important;
+}
+
+h2 {
+  font-size: var(--t-xl)!important;
+}
+
+h3 {
+  font-size: var(--t-lg)!important;
+}
+
+h4 {
+  font-size: var(--t-md)!important;
+}
+
+h5 {
+  font-size: var(--t-sm)!important;
+}
+
+/* TEXT */
+
+.text-sm {
+  font-size: var(--f-sm)!important;
+}
+
+.text-md {
+  font-size: var(--f-md)!important;
+}
+
+.text-lg {
+  font-size: var(--f-lg)!important;
+}
+
+.text-xl {
+  font-size: var(--f-xl)!important;
+}
+
+.text-xxl {
+  font-size: var(--f-xxl)!important;
+}
+
+p {
+  text-align: center;
+  font-size: var(--f-lg);
+  color: var(--color-dark);
+}
+
+/* SIZE */
+
+.w-25 {
+  width: 25%!important;
+}
+
+.w-50 {
+  width: 50%!important;
+}
+
+.w-75 {
+  width: 75%!important;
+}
+
+.w-100 {
+  width: 100%!important;
+}
+
+/* PADDING */
+
+.p-0 {
+  padding: 0rem!important;
+}
+.p-1 {
+  
+  padding: var(--f-sm)!important;
+}
+
+.p-2 {
+  
+  padding: var(--s-md)!important;
+}
+
+.p-3 {
+  
+  padding: var(--s-lg)!important;
+}
+
+.p-4 {
+  
+  padding: var(--s-xl)!important;
+}
+
+.p-5 {
+  
+  padding: var(--s-xxl)!important;
+}
+
+.pb-1 {
+  padding-bottom: var(--f-sm)!important;
+}
+
+.pb-2 {
+  padding-bottom: var(--s-md)!important;
+}
+
+.pb-3 {
+  padding-bottom: var(--s-lg)!important;
+}
+
+.pb-4 {
+  padding-bottom: var(--s-xl)!important;
+}
+
+.pb-5 {
+  padding-bottom: var(--s-xxl)!important;
+}
+
+/* MARGIN */
+
+.m-0 {
+  margin: 0rem!important;
+}
+.m-1 {
+  margin: var(--f-sm)!important;
+}
+
+.m-2 {
+  margin: var(--s-md)!important;
+}
+
+.m-3 {
+  margin: var(--s-lg)!important;
+}
+
+.m-4 {
+  margin: var(--s-xl)!important;
+}
+
+.m-5 {
+  margin: var(--s-xxl)!important;
+}
+
+/* FLEX */
+
+.flex {
+  display: flex!important;
+}
+
+.flex-row {
+  flex-direction: row!important;
+}
+
+.flex-col {
+  flex-direction: column!important;
+}
+
+.justify-center{
+  justify-content: center!important;
+}
+
+.justify-between{
+  justify-content: space-between!important;
+}
+
+.justify-start{
+  justify-content: start!important;
+}
+
+.justify-end{
+  justify-content: end!important;
+}
+
+.align-center{
+  align-items: center;
+}
+
+/* TEXT COLOR */
+
+.text-white {
+  color: #fff!important;
+}
+.text-dark {
+  color: var(--color-dark)!important;
+}
+.text-primary {
+  color: var(--color-primary)!important;
+}
+
+/* ======================================= */
+/* CSS GRID (12 COLUNAS)             */
+/* ======================================= */
+
+
+.grid-container {
+    display: grid;
+    
+    grid-template-columns: repeat(12, 1fr); 
+    gap: var(--s-md); /* Espaçamento entre colunas/linhas */
+    width: 90%; /* Largura padrão para o conteúdo */
+    max-width: 1200px; /* Limite de largura para desktop */
+    margin: var(--s-md) auto;
+}
+
+/* Classes de Colunas (para usar dentro de .grid-container) */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; } 
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; } 
+
+/* ======================================= */
+/* COMPONENTES                              */
+/* ======================================= */
+
+.btn {
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: var(--f-md);
+  text-decoration: none;
+  
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-rounded {
+  border-radius: 25px!important;
+}
+
+.btn-rounded-right {
+  border-top-right-radius: 25px!important;
+  border-top-left-radius: 0!important;
+  border-bottom-right-radius: 25px!important;
+  border-bottom-left-radius: 0!important;
+}
+
+.btn-rounded-left {
+  border-top-left-radius: 25px!important;
+  border-top-right-radius: 0!important;
+  border-bottom-left-radius: 25px!important;
+  border-bottom-right-radius: 0!important;
+}
+
+.btn-outline {
+  background-color: #fff!important;
+  color: var(--color-primary)!important;
+  border: solid 1px var(--color-primary);
+}
+
+/* Estados de Botões (Hover/Focus/Active) */
+.btn:hover, .btn:focus {
+  background-color: var(--color-primary-accent)!important;
+  color: var(--color-dark)!important; 
+  border-color: var(--color-primary-accent)!important;
+  cursor: pointer;
+}
+
+.btn:active {
+  /* Estado ao clicar */
+  background-color: var(--color-primary-dark)!important;
+}
+
+label{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-dark);
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+input, textarea{
+  display: block;
+  width: 95%;
+  height: 40px;
+  margin: 0;
+  padding: .375rem .75rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #eff1f3;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+textarea {
+  height: 200px!important;
+}
+
+
+input[type=text]:focus, textarea:focus {
+  border-color: var(--color-primary-accent);
+  outline: 0;
+  box-shadow: 0 0 0 .35rem rgba(118, 184, 103, 0.5);
+}
+
+
+input:invalid:not(:placeholder-shown), 
+textarea:invalid:not(:placeholder-shown) {
+    
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 .35rem rgba(239, 53, 37, 0.5); 
+}
+
+.form-check-input[type=radio] {
+    border-radius: 50%;
+}
+
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  margin-top: .25em;
+  margin-left: -1.5em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, .25);
+  float: left;
+}
+
+.form-check{
+  padding-left: 3rem;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left!important;
+  align-items: start!important;
+  margin: 1.5rem;
+}
+
+
+.alert {
+    padding: var(--s-sm);
+    margin-bottom: var(--s-sm);
+    border: 1px solid transparent;
+    border-radius: var(--s-xsm);
+    font-size: var(--f-md);
+    text-align: left;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: var(--f-sm);
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+
+/* ======================================= */
+/* HEADER / NAV                            */
+/* ======================================= */
+
+nav {
+  width: 100%;
+  padding: var(--s-md);
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 5px 20px var(--color-dark);
+  z-index: 1000;
+}
+
+/* 🟢 NOVO: ESTILIZAÇÃO DO BOTÃO MODO ESCURO */
+#theme-toggle {
+    /* Garante que o botão seja pequeno e circular */
+    width: 45px; 
+    height: 45px;
+    padding: 0;
+    margin-left: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Faz o botão circular, combinando com a classe .btn-rounded no HTML */
+    border-radius: 50%; 
+    
+    /* Estilo inicial */
+    background-color: var(--color-surface); 
+    color: var(--color-dark);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Garante que o ícone de lua/sol seja grande */
+    font-size: 1.3rem; 
+    
+    /* Z-index para garantir que esteja acima de outros elementos na nav */
+    z-index: 1001; 
+}
+
+/* Garante que o botão permaneça visível no modo dark */
+body.dark-mode #theme-toggle {
+    background-color: var(--color-primary-accent);
+    color: var(--color-dark); 
+}
+/* 🔴 FIM DO NOVO BLOCO */
+
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul > li > a {
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: var(--f-xl);
+  transition: all 0.3s ease;
+}
+
+nav > ul > li > a:hover {
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ======= MENU MOBILE ======= */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+}
+
+
+/* 1º BREAKPOINT */
+@media (max-width: 768px) {
+  nav {
+    padding: var(--s-sm);
+    justify-content: space-between; /* Ajusta a navegação mobile */
+  }
+  
+  /* Ajuste para o botão do modo escuro no mobile */
+  #theme-toggle {
+      /* Posicionamento mais seguro no topo da nav */
+      position: absolute; 
+      top: 10px; 
+      /* Posiciona o botão à esquerda do menu-toggle no mobile */
+      right: 60px; 
+  }
+
+  nav > ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Permite que o menu-toggle e o theme-toggle fiquem visíveis */
+  .menu-toggle, #theme-toggle {
+      display: block; 
+  }
+
+  nav > ul.open {
+    max-height: 350px;
+    padding-bottom: 10px;
+  }
+
+  nav > ul > li {
+    width: 100%;
+  }
+
+  nav > ul > li > a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--f-lg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  
+  .grid-container, #projetos, .w-75, .w-50 {
+    width: 95%;
+  }
+}
+
+.entrar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 7rem;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* CAPA */
+.capa {
+  
+  padding-top: 100px; 
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#capa-home {
+  background-image: url("../assets/img/capa_inicio1.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#capa-projetos {
+  background-image: url("../assets/img/capaprojetos.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#capa-cadastro {
+  background-image: url("../assets/img/cadastro.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* SOBRE NOS */
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--s-md);
+}
+
+.card-img{
+  border: solid 0;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+#endereco {
+  padding: 0px!important;
+  background-image: url("../assets/img/capa2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#endereco > article {
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+
+  background-color: rgba(249, 141, 32, 0.6);
+  padding: 20px;
+}
+
+.map {
+  border: solid 1px var(--color-primary);
+  border-radius: 15px;
+}
+
+/* CONTATO */
+
+.card-contato {
+  padding: 3rem;
+  border: 1px solid #6a9bcb;
+  border-radius: 5%;
+}
+
+/* FOOTER */
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  padding: 2rem 0;
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-primary)
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-endereco {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  color: #fff;
+}
+
+.footer-endereco > span {
+  margin: 0;
+  text-align: left!important;
+}
+
+/* PROJETOS */
+
+#projetos {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.card-projetos{
+  width: 20rem;
+  margin: 15px;
+  border: solid 0;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px var(--color-muted);
+}
+
+.card-header {
+  width: 100%;
+  height: 10rem;
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card-footer {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.img-header {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.text-card {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.text-card.show {
+  opacity: 1;
+  display: block;
+}
+
+/* CADASTRO */
+
+.alternativeField {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.alternativeField.show {
+  opacity: 1;
+  display: block;
+}
+
+/* ======================================= */
+/* 5 BREAKPOINTS RESPONSIVOS         */
+/* ======================================= */
+
+
+@media (max-width: 576px) {
+    
+    .capa {
+      height: 25rem;
+    }
+    
+    .card-projetos {
+      width: 100%;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+    
+    .capa {
+        height: 30rem;
+    }
+    
+    #projetos {
+        width: 90%;
+    }
+    .card-projetos {
+        width: 45%; 
+    }
+}
+
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    
+    nav > ul > li > a {
+        padding: 1rem 1rem;
+    }
+    #projetos {
+      width: 80%;
+    }
+}
+
+
+@media (min-width: 1201px) {
+    
+    h1 {
+        font-size: 4rem !important; 
+    }
+}
+
+/* ------------------------------------- */
+/* Tema de Alto Contraste / Escuro */
+/* ------------------------------------- */
+body.dark-mode {
+    background-color: var(--color-dark); /* Fundo escuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode .text-dark {
+    color: #f0f0f0 !important; /* Força títulos a serem claros */
+}
+
+/* Garante contraste nos botões no modo escuro */
+body.dark-mode .btn {
+    background-color: var(--color-primary-accent);
+    color: var(--color-dark);
+}
+
+/* Inverte a navegação para ser visível no fundo escuro */
+body.dark-mode nav {
+    background-color: rgba(44, 44, 44, 0.9);
+    box-shadow: 0px 5px 20px #000;
+}
+
+body.dark-mode nav > ul > li > a {
+    color: var(--color-primary-light);
+}
+
+body.dark-mode p {
+    color: #ccc; /* Ajusta a cor do texto padrão */
+}

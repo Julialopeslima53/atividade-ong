@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidarify</title>
+    <link rel="icon" href="../assets/img/logo_da_ong.jpeg" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="m-0">
+                <img src="../assets/img/logo_da_ong.jpeg" class="logo" alt="Home Page">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir Menu de Navegação">
+                &#9776; </button>
+            
+            <button id="theme-toggle" class="btn btn-rounded" aria-label="Alternar Modo Escuro e Claro">
+                🌙
+            </button>
+
+            <ul id="main-nav-list">
+                <li>
+                    <a href="index.html" data-page="home">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="index.html#endereco" data-page="endereco">Endereço</a>
+                </li>
+                <li>
+                    <a href="index.html#contato" data-page="contato">Contato</a>
+                </li>
+                <li>
+                    <a href="projetos.html" data-page="projetos">Projetos</a>
+                </li>
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="app-main-content">
+        <section id="capa-cadastro" class="capa">
+            <h1 class="text-white">Cadastro</h1>
+            <h4 class="text-white">Deseja fazer parte do nosso time ou tem algum projeto que você acredita que possamos colaborar ?</h4>
+        </section>
+        
+        <section id="cadastro-form"> 
+            <h2>Formulário de Cadastro e Colaboração</h2>
+            
+            <article class="flex flex-row justify-center align-center w-75">
+                <h3>Preencha seus dados para começar</h3>
+                <form action="#" method="get" class="card-contato w-100">
+                    <div class="form-check">
+                        <input class="form-check-input modalidade" type="radio" name="modalidade" id="modalidade1" checked>
+                        <label class="form-check-label" for="modalidade1">Colaborador</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input modalidade" type="radio" name="modalidade" id="modalidade2">
+                        <label class="form-check-label" for="modalidade2">Apoiador</label>
+                    </div>
+                    
+                    <div class=" flex flex-row">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Ex: Maria" required aria-label="nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" name="sobrenome" id="sobrenome" placeholder="Ex: Lima" required aria-label="sobrenome">
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Ex: Maria.Lima@email.com" required aria-label="email">
+                    </div>
+                    
+                    <div class=" flex flex-row">
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="number" name="cpf" id="cpf" placeholder="Ex: 11111111111 ou 00000000000000" required aria-label="cpf">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" name="telefone" id="telefone" placeholder="Ex: (61) 99999-9999" required aria-label="telefone">
+                        </div>
+                        
+                        <div class="form-group alternativeField show">
+                            <label for="data_nascimento">Data Nascimento</label>
+                            <input type="date" name="data_nascimento" id="data_nascimento" aria-label="data_nascimento">
+                        </div>
+                    </div>
+                    <div class=" flex flex-row">
+                        <div class="form-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" id="cep" placeholder="Ex: 99999-999" pattern="^\d{5}-\d{3}$" required aria-label="cep">
+                        </div>
+                        <div class="form-group">
+                            <label for="logradouro">Logradouro</label>
+                            <input type="text" name="logradouro" id="logradouro" placeholder="Ex: Rua 28..." required aria-label="logradouro">
+                        </div>
+                    </div>
+                    <div class=" flex flex-row">
+                        <div class="form-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro" placeholder="Ex: Santo André" required aria-label="bairro">
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" name="cidade" id="cidade" placeholder="Ex: Sao Paulo" required aria-label="cidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">UF</label>
+                            <input type="text" name="estado" id="estado" placeholder="Ex: SP" pattern="[A-Z]{2}" required aria-label="estado">
+                        </div>
+                    </div>
+                    <div class=" flex flex-row">
+                        <div class="form-group">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" name="complemento" id="complemento" placeholder="Ex: Casa" aria-label="complemento">
+                        </div>
+                        <div class="form-group">
+                            <label for="numero">Nº</label>
+                            <input type="number" name="numero" id="numero" placeholder="Ex: 12" required aria-label="numero">
+                        </div>
+                    </div>
+                    <div class="form-group alternativeField">
+                        <label for="descricao">Descrição Projeto</label>
+                        <textarea name="descricao" id="descricao" rows="5" placeholder="Ex: Ola, gostaria de fazer parte da Solidarify..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline">Enviar</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <a href="../pages/index.html">
+            <img src="../assets/img/logo_da_ong.jpeg" class="logo" alt="Home Page">
+        </a>
+        <div class="footer-endereco">
+            <span>Avenida Bias Fortes </span>
+            <span>Belo Horizonte</span>
+            <span>Minas Gerais (MG)</span>
+            <span>Tel: (61) 99999-9999</span>
+        </div>
+        <span class="text-white">ONG Solidarify app © 2025.</span>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
